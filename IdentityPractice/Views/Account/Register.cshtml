@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1>Register</h1>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    <div class="mb-3">
+        @Html.Label("Username", "Name", new{@class="form-label"})
+        @Html.TextBox("Username", string.Empty, new{@class="form-control"})
+    </div>
+    <div class="mb-3">
+        @Html.Label("Password", "Password", new{@class="form-label"})
+        @Html.Password("Password", string.Empty, new{@class="form-control"})
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+}
